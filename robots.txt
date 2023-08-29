@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://igi-2-mpa-official.onrender.com/sitemap.xml
