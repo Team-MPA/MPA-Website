@@ -292,7 +292,9 @@ input[type="checkbox"] {
 .hidescrollbar::-webkit-scrollbar {
     display: none;
 }
-
+::selection {
+    text-decoration: underline; 
+}
 .hidescrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -433,6 +435,7 @@ input[type="checkbox"] {
 .container{
     position: relative;
     top: 0px;
+    margin-bottom: 30%;
 }
 .gradient-text {
     background: linear-gradient(90deg, #00c7fe, #0066f6);

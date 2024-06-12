@@ -1,273 +1,618 @@
-<html>
-    <head>
-        <title>IGI 2 Multiplayer Alive Official-Maps</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta content="Multiplayer Alive official" property="og:title" />
-        <meta content="An official gaming community working with Multiplayer Game and provide servers and various other services with real-time support to all players." property="og:description" />
-        <meta content="https://igi2.tk/" property="og:url" />
-        <meta content="https://media.discordapp.net/attachments/966551530159353856/994912343773413446/MPA_LOGO_enhanced.png" property="og:image" />
-        <meta content="#ff0000" data-react-helmet="true" name="theme-color" />
-        <link rel="shortcut icon" type="image/xicon" href="MPA LOGO.png" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css" />
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css" />
-    </head>
+@font-face {
+    font-family: Visby;
+    src: url("VisbyRoundCF-Heavy.otf");
+}
+@font-face {
+    font-family: Lovelo;
+    src: url("Lovelo-Black.ttf");
+}
 
-    <style>
-        @font-face {
-            font-family: mpa official regular;
-            src: url("MPA.TTF");
-        }
-    </style>
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.0.woff2) format("woff2");
+    unicode-range: U+1f1e6-1f1ff;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+/* [1S] */
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.1.woff2) format("woff2");
+    unicode-range: U+200d, U+2620, U+26a7, U+fe0f, U+1f308, U+1f38c, U+1f3c1, U+1f3f3-1f3f4, U+1f6a9, U+e0062-e0063, U+e0065, U+e0067, U+e006c, U+e006e, U+e0073-e0074, U+e0077, U+e007f;
+}
 
-        .topnav {
-            overflow: hidden;
-            background-color: #000000;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
+/* [2I] */
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.2.woff2) format("woff2");
+    unicode-range: U+23, U+2a, U+30-39, U+a9, U+ae, U+200d, U+203c, U+2049, U+20e3, U+2122, U+2139, U+2194-2199, U+21a9-21aa, U+23cf, U+23e9-23ef, U+23f8-23fa, U+24c2, U+25aa-25ab, U+25b6, U+25c0, U+25fb-25fe, U+2611, U+2622-2623, U+2626,
+        U+262a, U+262e-262f, U+2638, U+2640, U+2642, U+2648-2653, U+2660, U+2663, U+2665-2666, U+2668, U+267b, U+267e-267f, U+2695, U+269b-269c, U+26a0, U+26a7, U+26aa-26ab, U+26ce, U+26d4, U+2705, U+2714, U+2716, U+271d, U+2721,
+        U+2733-2734, U+2747, U+274c, U+274e, U+2753-2755, U+2757, U+2764, U+2795-2797, U+27a1, U+27b0, U+27bf, U+2934-2935, U+2b05-2b07, U+2b1b-2b1c, U+2b55, U+3030, U+303d, U+3297, U+3299, U+fe0f, U+1f170-1f171, U+1f17e-1f17f, U+1f18e,
+        U+1f191-1f19a, U+1f201-1f202, U+1f21a, U+1f22f, U+1f232-1f23a, U+1f250-1f251, U+1f310, U+1f3a6, U+1f3b5-1f3b6, U+1f3bc, U+1f3e7, U+1f441, U+1f499-1f49c, U+1f49f-1f4a0, U+1f4a2, U+1f4ac-1f4ad, U+1f4b1-1f4b2, U+1f4b9, U+1f4db,
+        U+1f4f2-1f4f6, U+1f500-1f50a, U+1f515, U+1f518-1f524, U+1f52f-1f53d, U+1f549, U+1f54e, U+1f5a4, U+1f5e8, U+1f5ef, U+1f6ab, U+1f6ad-1f6b1, U+1f6b3, U+1f6b7-1f6bc, U+1f6be, U+1f6c2-1f6c5, U+1f6d0-1f6d1, U+1f6d7, U+1f6dc, U+1f7e0-1f7eb,
+        U+1f7f0, U+1f90d-1f90e, U+1f9e1, U+1fa75-1fa77, U+1faaf;
+}
 
-        .topnav a {
-            float: right;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 15px 32px;
-            text-decoration: none;
-            font-size: 17px;
-            transition: 0.4s;
-        }
+/* [3A] */
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.3.woff2) format("woff2");
+    unicode-range: U+231a-231b, U+2328, U+23f0-23f3, U+2602, U+260e, U+2692, U+2694, U+2696-2697, U+2699, U+26b0-26b1, U+26cf, U+26d1, U+26d3, U+2702, U+2709, U+270f, U+2712, U+fe0f, U+1f302, U+1f321, U+1f392-1f393, U+1f3a9, U+1f3bd,
+        U+1f3ee, U+1f3f7, U+1f3fa, U+1f451-1f462, U+1f484, U+1f489-1f48a, U+1f48c-1f48e, U+1f4a1, U+1f4a3, U+1f4b0, U+1f4b3-1f4b8, U+1f4bb-1f4da, U+1f4dc-1f4f1, U+1f4ff, U+1f50b-1f514, U+1f516-1f517, U+1f526-1f529, U+1f52c-1f52e,
+        U+1f550-1f567, U+1f56f-1f570, U+1f576, U+1f587, U+1f58a-1f58d, U+1f5a5, U+1f5a8, U+1f5b1-1f5b2, U+1f5c2-1f5c4, U+1f5d1-1f5d3, U+1f5dc-1f5de, U+1f5e1, U+1f5f3, U+1f6aa, U+1f6ac, U+1f6bd, U+1f6bf, U+1f6c1, U+1f6cb, U+1f6cd-1f6cf,
+        U+1f6d2, U+1f6e0-1f6e1, U+1f6f0, U+1f97b-1f97f, U+1f9af, U+1f9ba, U+1f9e2-1f9e6, U+1f9ea-1f9ec, U+1f9ee-1f9f4, U+1f9f7-1f9ff, U+1fa71-1fa74, U+1fa79-1fa7b, U+1fa86, U+1fa91-1fa93, U+1fa96, U+1fa99-1faa0, U+1faa2-1faa7, U+1faaa-1faae;
+}
 
-        .topnav a:hover {
-            background-color: #ff0000;
-            color: white;
-        }
+/* [4M] */
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.4.woff2) format("woff2");
+    unicode-range: U+265f, U+26bd-26be, U+26f3, U+26f8, U+fe0f, U+1f004, U+1f0cf, U+1f380-1f384, U+1f386-1f38b, U+1f38d-1f391, U+1f396-1f397, U+1f399-1f39b, U+1f39e-1f39f, U+1f3a3-1f3a5, U+1f3a7-1f3a9, U+1f3ab-1f3b4, U+1f3b7-1f3bb,
+        U+1f3bd-1f3c0, U+1f3c5-1f3c6, U+1f3c8-1f3c9, U+1f3cf-1f3d3, U+1f3f8-1f3f9, U+1f47e, U+1f4e2, U+1f4f7-1f4fd, U+1f52b, U+1f579, U+1f58c-1f58d, U+1f5bc, U+1f6f7, U+1f6f9, U+1f6fc, U+1f93f, U+1f941, U+1f945, U+1f947-1f94f, U+1f9e7-1f9e9,
+        U+1f9f5-1f9f6, U+1fa70-1fa71, U+1fa80-1fa81, U+1fa83-1fa85, U+1fa87-1fa88, U+1fa94-1fa95, U+1fa97-1fa98, U+1faa1, U+1faa9;
+}
 
-        .topnav a.active {
-            background-color: #ff0000;
-            color: white;
-        }
+/* [53] */
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.5.woff2) format("woff2");
+    unicode-range: U+2693, U+26e9-26ea, U+26f1-26f2, U+26f4-26f5, U+26fa, U+26fd, U+2708, U+fe0f, U+1f301, U+1f303, U+1f306-1f307, U+1f309, U+1f310, U+1f3a0-1f3a2, U+1f3aa, U+1f3cd-1f3ce, U+1f3d5, U+1f3d7-1f3db, U+1f3df-1f3e6, U+1f3e8-1f3ed,
+        U+1f3ef-1f3f0, U+1f488, U+1f492, U+1f4ba, U+1f54b-1f54d, U+1f5fa-1f5ff, U+1f680-1f6a2, U+1f6a4-1f6a8, U+1f6b2, U+1f6d1, U+1f6d5-1f6d6, U+1f6dd-1f6df, U+1f6e2-1f6e5, U+1f6e9, U+1f6eb-1f6ec, U+1f6f3-1f6f6, U+1f6f8, U+1f6fa-1f6fb,
+        U+1f9bc-1f9bd, U+1f9ed, U+1f9f3, U+1fa7c;
+}
 
-        .topnav .icon {
-            display: none;
-        }
+/* [69] */
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.6.woff2) format("woff2");
+    unicode-range: U+2615, U+fe0f, U+1f32d-1f330, U+1f336, U+1f33d, U+1f345-1f37f, U+1f382, U+1f52a, U+1f942-1f944, U+1f950-1f96f, U+1f99e, U+1f9aa, U+1f9c0-1f9cb, U+1fad0-1fadb;
+}
 
-        .topnav {
-            background-color: rgba(0, 0, 0, 0.402);
-            border-bottom: 0;
-            backdrop-filter: blur(25px);
-            box-shadow: rgba(0, 0, 0, 0) 0px 6px 16px 0px, rgba(0, 0, 0, 0.41) 0px 0px 4px 0px;
-            border-bottom: 1px solid #ff0000;
-        }
+/* [75] */
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.7.woff2) format("woff2");
+    unicode-range: U+200d, U+2600-2601, U+2603-2604, U+2614, U+2618, U+26a1, U+26c4-26c5, U+26c8, U+26f0, U+2728, U+2744, U+2b1b, U+2b50, U+fe0f, U+1f300, U+1f304-1f305, U+1f308, U+1f30a-1f30f, U+1f311-1f321, U+1f324-1f32c, U+1f331-1f335,
+        U+1f337-1f33c, U+1f33e-1f344, U+1f3d4, U+1f3d6, U+1f3dc-1f3de, U+1f3f5, U+1f400-1f43f, U+1f490, U+1f4a7, U+1f4ab, U+1f4ae, U+1f525, U+1f54a, U+1f573, U+1f577-1f578, U+1f648-1f64a, U+1f940, U+1f980-1f9ae, U+1f9ba, U+1fa90, U+1faa8,
+        U+1fab0-1fabd, U+1fabf, U+1face-1facf, U+1fae7;
+}
 
-        .head {
-            padding: 175px 20px;
-        }
+/* [8.0] */
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.8.woff2) format("woff2");
+    unicode-range: U+200d, U+2640, U+2642, U+2695-2696, U+26f7, U+26f9, U+2708, U+2764, U+fe0f, U+1f33e, U+1f373, U+1f37c, U+1f384-1f385, U+1f393, U+1f3a4, U+1f3a8, U+1f3c2-1f3c4, U+1f3c7, U+1f3ca-1f3cc, U+1f3eb, U+1f3ed, U+1f3fb-1f3ff,
+        U+1f466-1f478, U+1f47c, U+1f481-1f483, U+1f486-1f487, U+1f48b, U+1f48f, U+1f491, U+1f4bb-1f4bc, U+1f527, U+1f52c, U+1f574-1f575, U+1f57a, U+1f645-1f647, U+1f64b, U+1f64d-1f64e, U+1f680, U+1f692, U+1f6a3, U+1f6b4-1f6b6, U+1f6c0,
+        U+1f6cc, U+1f91d, U+1f926, U+1f930-1f931, U+1f934-1f93a, U+1f93c-1f93e, U+1f977, U+1f9af-1f9b3, U+1f9b8-1f9b9, U+1f9bc-1f9bd, U+1f9cc-1f9cf, U+1f9d1-1f9df, U+1fa82, U+1fac3-1fac5;
+}
 
-        @media screen and (max-width: 600px) {
-            .topnav a:not(:last-child) {
-                display: none;
-            }
-            .topnav a.icon {
-                float: right;
-                display: block;
-            }
-        }
+/* [90] */
+@font-face {
+    font-family: "Noto Color Emoji rev=2";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.9.woff2) format("woff2");
+    unicode-range: U+200d, U+261d, U+2620, U+2639-263a, U+2665, U+270a-270d, U+2728, U+2763-2764, U+2b50, U+fe0f, U+1f31a-1f31f, U+1f32b, U+1f383, U+1f389, U+1f3fb-1f3ff, U+1f440-1f450, U+1f463-1f465, U+1f479-1f47b, U+1f47d-1f480, U+1f485,
+        U+1f48b-1f48c, U+1f493-1f49f, U+1f4a4-1f4a6, U+1f4a8-1f4ab, U+1f4af, U+1f525, U+1f573, U+1f590, U+1f595-1f596, U+1f5a4, U+1f5e3, U+1f600-1f644, U+1f648-1f64a, U+1f64c, U+1f64f, U+1f90c-1f925, U+1f927-1f92f, U+1f932-1f933,
+        U+1f970-1f976, U+1f978-1f97a, U+1f9a0, U+1f9b4-1f9b7, U+1f9bb, U+1f9be-1f9bf, U+1f9d0, U+1f9e0-1f9e1, U+1fa75-1fa79, U+1fac0-1fac2, U+1fae0-1fae6, U+1fae8, U+1faf0-1faf8;
+}
 
-        @media screen and (max-width: 600px) {
-            .topnav.responsive {
-                position: fixed, relative;
-            }
-            .topnav.responsive .icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-            .topnav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-        }
+body {
+    background-image: url("images/Web.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    zoom: 0.7;
+}
 
-        .responsive {
-            width: 100%;
-            height: auto;
-            max-width: 400px;
-        }
+.boddy {
+    position: fixed;
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    background-image: url("images/Web.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 0.5px solid #00c7fe99;
+    border-radius: 20px;
+    overflow: hidden;
+    /*filter: drop-shadow(0 0 20px #00c7fe90);*/
+}
 
-        .hidescrollbar::-webkit-scrollbar {
-            display: none;
-        }
+.topicon,
+.topicon:hover {
+    height: 40px;
+    width: auto;
+    padding: 15px 15px;
+    float: left;
+}
 
-        .hidescrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
+nav {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10 50px 10 50px;
+    flex-wrap: wrap;
+}
 
-    <body class="hidescrollbar">
-        <div class="topnav" id="myTopnav">
-            <a href="about.html">About</a>
-            <a href="faq.html">FAQ</a>
-            <a class="active" href="maps.html">Maps</a>
-            <a href="links.html">Links</a>
-            <a href="how-to-setup.html">How To Setup</a>
-            <a href="index.html">Home</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
 
-            <script>
-                function myFunction() {
-                    var x = document.getElementById("myTopnav");
-                    if (x.className === "topnav") {
-                        x.className += " responsive";
-                    } else {
-                        x.className = "topnav";
-                    }
-                }
-            </script>
-        </div>
-        <br />
-        <br />
-        <body bgcolor="black">
-            <font color="white" size="6">
-                <font face="mpa official regular">
-                    <h1><p align="center">MAPS</p></h1>
-                </font>
-            </font>
-            <br />
-            <br />
+nav ul li {
+    margin: 0 5px;
+    font-family: arial;
+}
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #00c7fe, #0066f6);
+    filter: drop-shadow(0 0 20px #00c7fe80);
+}
+nav .menu-btn i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+input[type="checkbox"] {
+    display: none;
+}
+@media (max-width: 1000px) {
+    nav {
+        padding: 0 40px 0 50px;
+    }
+}
+@media (max-width: 920px) {
+    .topicon,
+    .topicon:hover {
+        position: relative;
+        left: -25px;
+        height: 20px;
+        width: auto;
+        padding: 15px 15px;
+        float: left;
+    }
+    nav .menu-btn i {
+        display: block;
+    }
+    #click:checked ~ .menu-btn i:before {
+        content: "\f00d";
+    }
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -115%;
+        background: linear-gradient(90deg, #00c7fe, #0066f6);
+        height: 200vh;
+        width: 100%;
+        text-align: center;
+        display: block;
 
-            <head>
-                <body bgcolor="black">
-                    <font color="white" size="6">
-                        <h6><p align="center">Download IGI 2 Multiplayer Maps</p></h6>
-                    </font>
-                    <br />
-                    <br />
-                    <style>
-                        .button {
-                            background-color: transparent;
-                            border: none;
-                            color: white;
-                            padding: 16px 32px;
-                            text-align: center;
-                            text-decoration: none;
-                            display: inline-block;
-                            font-size: 16px;
-                            margin: 0px 0px;
-                            transition-duration: 0.7s;
-                            cursor: pointer;
-                        }
+        z-index: 999;
+    }
+    #click:checked ~ ul {
+        left: 0;
+        z-index: 999;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+        z-index: 999;
+    }
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        z-index: 999;
+    }
+    #click:checked ~ ul li a {
+        margin-left: 0px;
+        z-index: 999;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: cyan;
+        z-index: 999;
+    }
+    li {
+        position: relative;
+        display: list-item !important;
+        left: -10%;
+        z-index: 999;
+    }
+}
 
-                        .button1 {
-                            background-color: none;
-                            color: white;
-                            border: 2px solid #ff0000;
-							filter: drop-shadow(0 0 30px #ff000080);
-                        }
+.icon {
+    position: relative;
+    height: 40px;
+    width: auto;
+    left: -15px;
+}
+::selection {
+    text-decoration: underline; 
+}
+.hyper:link {
+    color: #00c7fe;
+}
 
-                        .button1:hover {
-                            background-color: #ff0000;
-                            color: white;
-                        }
-                    </style>
+/* visited link */
+.hyper:visited {
+    color: #00c7fe;
+}
 
-                    <body bgcolor="black">
-	
-	
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122773159116820/redstone.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Redstone</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122833238351932/forestraid.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Forestraid</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122835620708363/sandstorm.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Sandstorm</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122840154742794/timberland.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Timberland</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122915165691944/ThePrison.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> The Prison</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122606775279636/chinesetemple.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Chinese Temple</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122895813165097/AREA27.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Area27</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122894986874900/winterland.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Winterland</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122906277965824/Jungle.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> jungle</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122887449726976/Canyon_2018.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Canyon 2018</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122846072909864/dockside.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Dockside</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122855602384956/dockbeta.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Dockbeta</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122871976951828/libyanvillage.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Libyan Village</button></a href></p><br><br>        
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122848065216512/Libyan_Rendezvous.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Libyan Rendezvous</button></a href></p><br><br>        
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122745401245726/Aimmap.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Aim Map</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122903560052756/TheAirfield2021.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> The Airfield 2022</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122890046013440/mplocation1.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Bridge Accross The Dnestr</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122829895483432/PriboisVilla.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Priboi's Villa</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122793648304138/Pribois--Villa--Night.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Priboi's Villa Night</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122850674069544/mplocation3.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Island Assult</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122882810814504/WW3-SnowlandsAssault.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Snowland's Assult</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122893187522560/Production_Facility.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Production Facility</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122785574281236/Desertraid.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Desertraid</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122872488652870/Warehouse_Domination.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> <font face="mpa official regular" size="5">MPA</font> Domination</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122815995576360/Air-Strike.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Air-Strike</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122698496315482/DeepInMines.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Deep In Mines</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122901056061460/TheFormula.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> The Formula</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885123000406532146/MPA.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> <font face="mpa official regular" size="5">MPA</font></button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885122997764096010/NO_NAME_CITY.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> NO NAME CITY</button></a href></p><br><br>
-						<p align="center"><a href="https://cdn.discordapp.com/attachments/885122487204077619/885123009554288690/Islands_.zip"><button style="width: 280px;" class="button button1"><i class="fa-solid fa-earth-americas"></i> Islands</button></a href></p><br><br>
-					 
-						<br><br>
-                        <div class="instructions">
-                            <body bgcolor="black">
-                                <font color="white" size="8">
-                                    <h6>
-                                        <p align="center"><u>-: How to Install :-</u></p>
-                                    </h6>
-                                </font>
-                                <br />
-                                <body bgcolor="black">
-                                    <font color="white" size="6">
-                                        <h6>
-                                            <p align="center">
-                                                First choose which maps you want and then download those maps using the buttons given above<br />
-                                                <br />
-                                                Extract them using WinRAR or 7 Zip<br />
-                                                <br />
-                                                <img src="images/extract.png" alt="Image" class="responsive" /><br />
-                                                <br />
-                                                Then right click on IGI 2 icon on your Desktop and select "open file loacation"<br />
-                                                <br />
-                                                <img src="images/location.png" alt="Image" class="responsive" /><br />
-                                                <br />
-                                                After that go to "MISSIONS/multiplayer" folder and paste those unzipped map files on there<br />
-                                                <br />
-                                                <img src="images/paste1.png" alt="Image" class="responsive" /><br />
-                                                <br />
-                                                <img src="images/paste2.png" alt="Image" class="responsive" /><br />
-                                                <br />
-                                                <img src="images/paste3.png" alt="Image" class="responsive" /><br />
-                                                <br />
-                                                (Note:- if you dont have the needed map installed, The launcher will automatically install the map)
-                                            </p>
-                                        </h6>
-                                    </font>
-                                    <br />
-                                    <br />
+/* mouse over link */
+.hyper:hover {
+    color: #0066f6;
+}
+/*Scrollbar Hide*/
 
-                                    <style>
-                                        * {
-                                            margin: 0;
-                                            padding: 0;
-                                            box-sizing: border-box;
-                                        }
-                                    </style>
-                                
-								
-                            
-                        </div>
-                    
-            </head>
-        
-    
+.hidescrollbar::-webkit-scrollbar {
+    display: none;
+}
 
+.hidescrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.header {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -210%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-family: Visby;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00c7fe, #0066f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+:root {
+  --primary-color: slategrey;
+}
+
+
+.carousel-container {
+  border-radius: 30px;
+  overflow: hidden;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 0 30px -20px #223344;
+  margin: auto;
+  z-index: 0;
+  margin-top: -120px;
+  z-index:1;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  display: block;
+  width: 100%;
+}
+
+/* image gradient overlay [optional] */
+/*  .mySlides::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+    background-image: linear-gradient(-45deg, rgba(110, 0, 255, .1), rgba(70, 0, 255, .2));
+} */
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: auto;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 0 8px 8px 0;
+  background: rgba(173, 216, 230, 0.1);
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(173, 216, 230, 0.3);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  background-color: rgba(10, 10, 20, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.number {
+  color: #f2f2f2;
+  font-size: 16px;
+  background-color: rgba(173, 216, 230, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: none;
+}
+.dots-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  margin: 0 4px;
+  background-color: rgba(173, 216, 230, 0.2);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  display: none;
+}
+.active,
+.dots:hover {
+  background-color: rgba(173, 216, 230, 0.8);
+}
+
+/* transition animation */
+.animate {
+  -webkit-animation-name: animate;
+  -webkit-animation-duration: 1s;
+  animation-name: animate;
+  animation-duration: 2s;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1.1) rotateY(10deg);
+  }
+  to {
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+
+
+.main {
+        overflow: hidden;
+        overflow-y: scroll;
+        max-height: 100%;
+        padding-top: 10%;
+}
+
+.down-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background-color: #ffffff10;
+    backdrop-filter: blur(25px);*/
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    margin-top: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index:0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color : #00c7fe;
+    background-image : linear-gradient(90deg, #00000000, #0066f6);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 5px;
+    font-family: Arial;
+    transition: background 0.5s ease;
+    zoom: 1.2;
+}
+
+.button-container {
+    position: relative;
+    left: 0;
+    cursor: pointer;
+    padding-bottom: 1%;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color : #0066f6;
+    background-image : linear-gradient(90deg, #00000000, #0066f6);
+}
+
+
+@media (max-width: 920px) {
+    body {
+        background-image: url("images/Web.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .boddy {
+        position: fixed;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        background-image: url("images/Web.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        border: 0.5px solid #00c7fe99;
+        border-radius: 20px;
+        /*filter: drop-shadow(0 0 20px #00c7fe90);*/
+    }
+
+    .icon {
+        position: relative;
+        height: 25px;
+        width: auto;
+    }
+
+    .header {
+        position: relative;
+        top: 18%;
+        left: 51%;
+        transform: translate(-50%, 30%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-size: 35px;
+        font-family: Visby;
+        padding-bottom: 10%;
+}
+.gradient-text {
+    background: linear-gradient(90deg, #00c7fe, #0066f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel-container {
+    position: relative;
+    margin-top: 25%;
+    max-width: 400px;
+}
+
+.down-container {
+    position: relative;
+    margin-top: 10%;
+}
+
+}
+@media (min-width: 1920px) and (max-width: 1920px) {
+    body {
+        background-image: url("images/Web.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        zoom: 1 !important;
+    }
+    .boddy {
+        border: 2px solid #00c7fe99 !important;
+    }
+}
+@media (min-width: 1280px) and (max-width: 1280px) {
+    body {
+        background-image: url("images/Web.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        zoom: 0.65 !important;
+    }
+    .boddy {
+        border: 0.5px solid #00c7fe99 !important;
+    }
+}
+@media (min-width: 2560px) and (max-width: 2560px) {
+    body {
+        background-image: url("images/Web.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        zoom: 1.3;
+    }
+    .boddy {
+        border: 2.5px solid #00c7fe99 !important;
+    }
+}
+@media (min-width: 3840px) and (max-width: 3840px) {
+    body {
+        background-image: url("images/Web.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        zoom: 1.97;
+    }
+    .boddy {
+        border: 3px solid #00c7fe99 !important;
+    }
+}

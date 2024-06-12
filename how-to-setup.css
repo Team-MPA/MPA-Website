@@ -311,7 +311,9 @@ input[type="checkbox"] {
     font-size: 60px;
     font-family: Visby;
 }
-
+::selection {
+    text-decoration: underline; 
+}
 .gradient-text {
     background: linear-gradient(90deg, #00c7fe, #0066f6);
     background-clip: text;
@@ -535,7 +537,7 @@ input[type="checkbox"] {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        zoom: 1.05;
+        zoom: 1;
     }
     .boddy {
         border: 2px solid #00c7fe99 !important;

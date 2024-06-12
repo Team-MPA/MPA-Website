@@ -14,7 +14,9 @@ body {
     background-size: cover;
     zoom: 0.7;
 }
-
+::selection {
+    text-decoration: underline; 
+}
 .boddy {
     position: fixed;
     top: 30px;
@@ -190,7 +192,7 @@ input[type="checkbox"] {
     align-items: center;
     text-align: center;
     color: white;
-    font-size: 40px;
+    font-size: 39px;
     font-family: Visby;
 }
 
@@ -481,7 +483,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    zoom: .95;
+    zoom: 1;
+
 }
 .boddy {
     border: 2px solid #00c7fe99 !important;

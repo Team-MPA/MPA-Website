@@ -311,7 +311,9 @@ input[type="checkbox"] {
     font-size: 60px;
     font-family: Visby;
 }
-
+::selection {
+    text-decoration: underline; 
+}
 .gradient-text {
     background: linear-gradient(90deg, #00c7fe, #0066f6);
     background-clip: text;
@@ -389,6 +391,9 @@ input[type="checkbox"] {
     background-image : linear-gradient(90deg, #00000000, #0066f6);
 }
 
+.button-mp{
+    margin-left: 80;
+}
 
 @media (max-width: 920px) {
     body {
@@ -421,7 +426,7 @@ input[type="checkbox"] {
 
     .header {
         position: relative;
-        top: 18%;
+        top: 17.5%;
         left: 51%;
         transform: translate(-50%, -50%);
         display: flex;
@@ -441,7 +446,6 @@ input[type="checkbox"] {
     }
     .container {
         position: relative;
-        margin-top: 120%;
         width: 350px;
         display: flex;
         flex-direction: column;
@@ -450,6 +454,9 @@ input[type="checkbox"] {
         backdrop-filter: none;
         border-radius: 10px;
         box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+        transform: translate(-50%,5.5%);
+        margin-bottom: 70%;
+    
     }
 
     .image-container {
@@ -473,7 +480,7 @@ input[type="checkbox"] {
     /* Add any other styling for buttons as needed */
     .button-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 10px;
     justify-content: center;
 }
